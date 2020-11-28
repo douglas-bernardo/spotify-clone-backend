@@ -1,0 +1,267 @@
+{
+    "playlists": [
+      {
+        "id": 1,
+        "owner_id": 0,
+        "nome": "This is Rolling Stones",
+        "capa": "/images/cover/the_rolling_stones.jpeg",
+        "descricao": "The Rolling Stones essencial tracks",
+        "musicas": [
+          {
+            "id": 1,
+            "nome": "Gimme Shelter",
+            "cantor": "The Rolling Stones",
+            "duracao": "04:30",
+            "url_audio": "/audios/The Rolling Stones - Gimme Shelter.mp3"
+          },
+          {
+            "id": 2,
+            "nome": "Start Me Up",
+            "cantor": "The Rolling Stones",
+            "duracao": "03:33",
+            "url_audio": "/audios/The Rolling Stones -  Start Me Up.mp3"
+          },
+          {
+            "id": 3,
+            "nome": "Living In A Ghost Town",
+            "cantor": "The Rolling Stones",
+            "duracao": "04:07",
+            "url_audio": "/audios/The Rolling Stones - Living In A Ghost Town.mp3"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "owner_id": 0,
+        "nome": "This Is Guns N' Roses",
+        "capa": "/images/cover/guns_and-roses.jpeg",
+        "descricao": "The best of Guns N' Roses, all in one playlist.",
+        "musicas": [
+          {
+            "id": 4,
+            "nome": "Paradise City",
+            "cantor": "Guns N' Roses",
+            "duracao": "04:30",
+            "url_audio": "/audios/Guns N Roses - Paradise City.mp3"
+          },
+          {
+            "id": 5,
+            "nome": "Knockin' On Heaven's Door",
+            "cantor": "Guns N' Roses",
+            "duracao": "06:18",
+            "url_audio": "/audios/Guns N Roses - Knockin On Heavens Door.mp3"
+          },
+          {
+            "id": 6,
+            "nome": "Sweet Child O' Mine",
+            "cantor": "Guns N' Roses",
+            "duracao": "04:07",
+            "url_audio": "/audios/Guns N Roses - Sweet Child O Mine.mp3"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "owner_id": 0,
+        "nome": "This Is Legião Urbana",
+        "capa": "/images/cover/legiao_urbana.jpeg",
+        "descricao": "A banda criou diveros hinos do rock nacional. Relembre grandes sucessos de uma das maiores bandas da história da música brasileira.",
+        "musicas": [
+          {
+            "id": 7,
+            "nome": "Tempo Perdido",
+            "cantor": "Legião Urbana",
+            "duracao": "04:30",
+            "url_audio": "/audios/Legião Urbana - Tempo Perdido.mp3"
+          },
+          {
+            "id": 8,
+            "nome": "Índios",
+            "cantor": "Legião Urbana",
+            "duracao": "06:18",
+            "url_audio": "/audios/Legião Urbana - Índios.mp3"
+          },
+          {
+            "id": 9,
+            "nome": "Pais e Filhos",
+            "cantor": "Legião Urbana",
+            "duracao": "04:07",
+            "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "owner_id": 0,
+        "nome": "This Is The Beatles",
+        "capa": "/images/cover/the_beatles.jpeg",
+        "descricao": "Come together to listen to their greatest hits.",
+        "musicas": [
+          {
+            "id": 10,
+            "nome": "Here Comes The Sun",
+            "cantor": "The Beatles",
+            "duracao": "04:30",
+            "url_audio": "/audios/The Beatles - Here Comes The Sun.mp3"
+          },
+          {
+            "id": 11,
+            "nome": "Hey Jude",
+            "cantor": "The Beatles",
+            "duracao": "06:18",
+            "url_audio": "/audios/The Beatles - Hey Jude.mp3"
+          },
+          {
+            "id": 12,
+            "nome": "Come Together",
+            "cantor": "The Beatles",
+            "duracao": "04:07",
+            "url_audio": "/audios/The Beatles - Come Together.mp3"
+          }
+        ]
+      },
+      {
+        "owner_id": 1,
+        "nome": "My playlist 1",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "teste",
+        "musicas": [
+          {
+            "id": 7,
+            "nome": "Tempo Perdido",
+            "cantor": "Legião Urbana",
+            "duracao": "04:30",
+            "url_audio": "/audios/Legião Urbana - Tempo Perdido.mp3"
+          }
+        ],
+        "id": 5
+      },
+      {
+        "owner_id": 1,
+        "nome": "My playlist 2",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "Uma nova playlist de teste",
+        "musicas": [
+          {
+            "id": 9,
+            "nome": "Pais e Filhos",
+            "cantor": "Legião Urbana",
+            "duracao": "04:07",
+            "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+          }
+        ],
+        "id": 6
+      },
+      {
+        "owner_id": 2,
+        "nome": "Guns",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "Só Gus",
+        "musicas": [
+          {
+            "id": 6,
+            "nome": "Sweet Child O' Mine",
+            "cantor": "Guns N' Roses",
+            "duracao": "04:07",
+            "url_audio": "/audios/Guns N Roses - Sweet Child O Mine.mp3"
+          }
+        ],
+        "id": 7
+      },
+      {
+        "owner_id": 2,
+        "nome": "My playlist 7",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "Teste",
+        "musicas": [
+          {
+            "id": 3,
+            "nome": "Living In A Ghost Town",
+            "cantor": "The Rolling Stones",
+            "duracao": "04:07",
+            "url_audio": "/audios/The Rolling Stones - Living In A Ghost Town.mp3"
+          }
+        ],
+        "id": 8
+      },
+      {
+        "owner_id": 2,
+        "nome": "Teste2",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "Nova playlist de teste",
+        "musicas": [
+          {
+            "id": 3,
+            "nome": "Living In A Ghost Town",
+            "cantor": "The Rolling Stones",
+            "duracao": "04:07",
+            "url_audio": "/audios/The Rolling Stones - Living In A Ghost Town.mp3"
+          }
+        ],
+        "id": 9
+      },
+      {
+        "owner_id": 2,
+        "nome": "My playlist 2",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "abciaobcikasjb",
+        "musicas": [
+          {
+            "id": 4,
+            "nome": "Paradise City",
+            "cantor": "Guns N' Roses",
+            "duracao": "04:30",
+            "url_audio": "/audios/Guns N Roses - Paradise City.mp3"
+          },
+          {
+            "id": 9,
+            "nome": "Pais e Filhos",
+            "cantor": "Legião Urbana",
+            "duracao": "04:07",
+            "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+          }
+        ],
+        "id": 10
+      },
+      {
+        "owner_id": 2,
+        "nome": "My playlist 7",
+        "capa": "/images/cover/default_folder.png",
+        "descricao": "Teste Pklay",
+        "musicas": [
+          {
+            "id": 9,
+            "nome": "Pais e Filhos",
+            "cantor": "Legião Urbana",
+            "duracao": "04:07",
+            "url_audio": "/audios/Legião Urbana - Pais E Filhos.mp3"
+          },
+          {
+            "id": 4,
+            "nome": "Paradise City",
+            "cantor": "Guns N' Roses",
+            "duracao": "04:30",
+            "url_audio": "/audios/Guns N Roses - Paradise City.mp3"
+          }
+        ],
+        "id": 11
+      }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "email": "json.server.test@mailtest.com",
+        "nickname": "json.server",
+        "password": "json.server",
+        "birthday": "2020-01-01",
+        "gender": "NB"
+      },
+      {
+        "email": "jkdouglas2222@gmail.com",
+        "nickname": "Bernardo Feijão 2",
+        "password": "12345",
+        "birthday": "1985-11-12",
+        "id": 2
+      }
+    ]
+  }
