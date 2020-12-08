@@ -21,9 +21,31 @@ export default {
     show(request: Request, response: Response) {
         const { id } = request.params;
 
-        const user = users.filter(pl => pl.id === id);
+        const user = users.find(pl => pl.id === id);
+
+        if (!user) {
+            return response.status(400).json( { error: 'User not found' } );
+        }
 
         return response.json(user);
+    },
+
+    login(request: Request, response: Response){
+
+        const { email, password } = request.body;
+
+        const user = users.find(pl => pl.email === email);
+
+        if (!user) {
+            return response.status(401).json( { error: 'Incorrect email/password combination!' } );
+        }
+
+        if (user.password !== password) {
+            return response.status(401).json( { error: 'Incorrect email/password combination!' } );
+        }
+
+        return response.json(user);
+
     },
 
     create(request: Request, response: Response) {
@@ -64,7 +86,7 @@ export default {
         const userIndex = users.findIndex(user => user.id === id);
 
         if (userIndex < 0) {
-            return response.status(400).json( { error: 'Not found' } );
+            return response.status(400).json( { error: 'User not found' } );
         }
 
         const user = {

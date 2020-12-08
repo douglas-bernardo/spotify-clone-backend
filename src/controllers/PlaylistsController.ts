@@ -30,9 +30,23 @@ export default {
     show(request: Request, response: Response) {
         const { id } = request.params;
 
-        const playlist = playlists.filter(pl => pl.id === id);
+        const playlist = playlists.find(pl => pl.id === id);
+
+        if (!playlist) {
+            return response.status(400).json( { error: 'Playlist not found' } );
+        }
 
         return response.json(playlist);
+    },
+
+    findByOwnerId(request: Request, response: Response){
+
+        const { id } = request.params;
+
+        const owner_playlists = playlists.filter(pl => pl.owner_id === id);
+
+        return response.json(owner_playlists);
+
     },
 
     create(request: Request, response: Response) {
@@ -76,7 +90,7 @@ export default {
         const playlistIndex = playlists.findIndex(playlist => playlist.id === id);
 
         if (playlistIndex < 0) {
-            return response.status(400).json({error: 'Not found'});
+            return response.status(400).json({error: 'Playlist not found'});
         }
 
         const playlist = {
