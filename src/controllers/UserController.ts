@@ -1,27 +1,20 @@
 import { Request, Response } from 'express';
-import { v4 as uuid } from 'uuid';
 
-interface User {
-    id: string;
-    email: string;
-    nickname: string;
-    password: string;
-    birthday: string;
-    gender: string;
-}
-
-const users: Array<User> = new Array<User>();
+import User from '../models/User';
 
 export default {
 
-    index(request: Request, response: Response) {
+    async index(request: Request, response: Response) {
+        const users = await User.find();
+
         return response.json(users);
+ 
     },
 
-    show(request: Request, response: Response) {
+    async show(request: Request, response: Response) {
         const { id } = request.params;
 
-        const user = users.find(pl => pl.id === id);
+        const user = await User.findById(id);
 
         if (!user) {
             return response.status(400).json( { error: 'User not found' } );
@@ -30,11 +23,13 @@ export default {
         return response.json(user);
     },
 
-    login(request: Request, response: Response){
+    async login(request: Request, response: Response){
 
         const { email, password } = request.body;
 
-        const user = users.find(pl => pl.email === email);
+        const user = await User.findOne({
+            email,
+        });
 
         if (!user) {
             return response.status(401).json( { error: 'Incorrect email/password combination!' } );
@@ -48,59 +43,22 @@ export default {
 
     },
 
-    create(request: Request, response: Response) {
+    async create(request: Request, response: Response) {
 
-        const {
-            email,
-            nickname,
-            password,
-            birthday,
-            gender,
-        } = request.body;
-
-        const data = {
-            id: uuid(),
-            email,
-            nickname,
-            password,
-            birthday,
-            gender,
-        };
-
-        users.push(data);
-
-        return response.json(data);
-    },
-
-    update(request: Request, response: Response) {
-        const id = request.params.id;
-
-        const {
-            email,
-            nickname,
-            password,
-            birthday,
-            gender,
-        } = request.body;
-
-        const userIndex = users.findIndex(user => user.id === id);
-
-        if (userIndex < 0) {
-            return response.status(400).json( { error: 'User not found' } );
-        }
-
-        const user = {
-            id,
-            email,
-            nickname,
-            password,
-            birthday,
-            gender
-        };
-
-        users[userIndex] = user;
+        const user = await User.create(request.body);
 
         return response.json(user);
+
+    },
+
+    async update(request: Request, response: Response) {
+        
+        const id = request.params.id;
+
+        const user = await User.findByIdAndUpdate(id, request.body, { new: true });
+
+        return response.json(user);
+
     }
 
 }
